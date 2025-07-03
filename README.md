@@ -15,3 +15,4 @@ De front-end moet een responsive webpagina zijn waar de data van de api kan weer
 
 ## Opmerkingen
 Als er iemand eventuele opmerkingen heeft bij het idee kan je deze eventueel maken en bespreken. Dit is hoe ik het op dit moment zie, als jullie dit anders zien moet je dit gerust laten weten.
+__Best alles in het Engels programmeren__
