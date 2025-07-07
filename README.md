@@ -8,10 +8,10 @@ De Friendsplanner in het begin een website zijn waar je met vrienden in een groe
 Natuurlijk moet je mensen kunnen uitnodigen voor je groep. Dit moet je kunnen via een uitnodigingslink die je dan via andere kanalen moet kunnen versturen of via een mail die de andere persoon krijgt of eventueel een pop-up op de website.
 
 ## Back-end
-Voor de back-end had ik in gedachten om een api te maken die alleen toegankelijk is voor de front-end. Deze api kan gemaakt worden via Node.js. Best wordt er ook gebruik gemaakt van een mongoDB omdat er later eventuele aanpassingen kunnen komen aan modellen en deze zijn dan makkelijker door te voeren met een mongoDB.
+Voor de back-end had ik in gedachten om een api te maken die alleen toegankelijk is voor de front-end. Deze api kan gemaakt worden via Node.js. Best wordt er ook gebruik gemaakt van een mongoDB omdat er later eventuele aanpassingen kunnen komen aan modellen en deze zijn dan makkelijker door te voeren met een mongoDB. Het is ook mogelijk met een SQL database.
 
 ## Front-end
-De front-end moet een responsive webpagina zijn waar de data van de api kan weergegeven worden, deze kan gemaakt worden in Angular. Later kan deze webpagina ook nog uitgebreid worden naar apps voor android en IOS, maar deze zijn uitbreidingen bovenop de website.
+De front-end moet een responsive webpagina zijn waar de data van de api kan weergegeven worden, deze kan gemaakt worden in Angular of React. Later kan deze webpagina ook nog uitgebreid worden naar apps voor android en IOS, maar deze zijn uitbreidingen bovenop de website.
 
 ## Opmerkingen
 Als er iemand eventuele opmerkingen heeft bij het idee kan je deze eventueel maken en bespreken. Dit is hoe ik het op dit moment zie, als jullie dit anders zien moet je dit gerust laten weten.
