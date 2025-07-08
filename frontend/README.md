@@ -8,4 +8,5 @@ npx create-react-app frontend
 
 ## Runnen van de app
 cd frontend
+
 npm start
