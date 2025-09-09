@@ -16,7 +16,7 @@ async function startServer() {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
-    console.log("✅ Connected to MongoDB Atlas");
+    console.log("Connected to MongoDB Atlas");
 
     // Alle events ophalen
     app.get("/events", async (req, res) => {
@@ -24,22 +24,11 @@ async function startServer() {
       res.json(events);
     });
 
-    // Nieuw event toevoegen
-    app.post("/events", async (req, res) => {
-      try {
-        const event = new Event(req.body);
-        await event.save();
-        res.status(201).json(event);
-      } catch (err) {
-        res.status(400).json({ error: err.message });
-      }
-    });
-
     app.listen(PORT, () =>
-      console.log(`🚀 Server running on http://localhost:${PORT}`)
+      console.log(`Server running on http://localhost:${PORT}`)
     );
   } catch (err) {
-    console.error("❌ Connection error:", err);
+    console.error("Connection error:", err);
   }
 }
 

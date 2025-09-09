@@ -11,5 +11,4 @@ const eventSchema = new mongoose.Schema({
   location: { type: String }
 }, { timestamps: true });
 
-// force mongoose to use the "Event" collection instead of "events"
 export default mongoose.model("Event", eventSchema, "Event");
