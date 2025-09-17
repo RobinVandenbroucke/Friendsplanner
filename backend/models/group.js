@@ -1,9 +1,11 @@
 const mongoose = require("mongoose");
 
-const groupSchema = new mongoose.Schema({
+const GroupSchema = new mongoose.Schema({
     groupName: { type: String, required: true },
     description: { type: String },
     createdBy: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true }
 }, { timestamps: true });
 
-module.exports = mongoose.model("Group", groupSchema, "Group");
+const GroupModel = mongoose.model("Group", GroupSchema);
+
+odule.exports = GroupModel;

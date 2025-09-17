@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const eventSchema = new mongoose.Schema({
+const EventSchema = new mongoose.Schema({
   groupId: { type: mongoose.Schema.Types.ObjectId, ref: "Group", required: true },
   ownerUserId: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
   title: { type: String, required: true },
@@ -11,4 +11,6 @@ const eventSchema = new mongoose.Schema({
   location: { type: String }
 }, { timestamps: true });
 
-export default mongoose.model("Event", eventSchema, "Event");
+const EventModel = mongoose.model("Event", EventSchema);
+
+module.exports = EventModel;

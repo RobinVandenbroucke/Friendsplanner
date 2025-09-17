@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const groupMemberSchema = new mongoose.Schema({
+const GroupMemberSchema = new mongoose.Schema({
     groupId: { type: mongoose.Schema.Types.ObjectId, ref: "Group", required: true },
     userId: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
     role: { type: String, enum: ["member", "admin"], default: "member" },
@@ -8,4 +8,6 @@ const groupMemberSchema = new mongoose.Schema({
     joinedAt: { type: Date, default: Date.now }
 }, { timestamps: true });
 
-module.exports = mongoose.model("GroupMember", groupMemberSchema, "GroupMember");
+const GroupMemberModel = mongoose.model("GroupMember", GroupMemberSchema);
+
+module.exports = GroupMemberModel;
