@@ -10,6 +10,6 @@ const NotificationSchema = new mongoose.Schema({
     createdAt: { type: Date, default: Date.now }
 }, { timestamps: true });
 
-const NotificationModel = mongoose.model("Notification", NotificationSchema);
+const NotificationModel = mongoose.model("Notification", NotificationSchema, "Notification");
 
 module.exports = NotificationModel;

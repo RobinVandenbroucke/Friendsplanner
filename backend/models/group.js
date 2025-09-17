@@ -6,6 +6,6 @@ const GroupSchema = new mongoose.Schema({
     createdBy: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true }
 }, { timestamps: true });
 
-const GroupModel = mongoose.model("Group", GroupSchema);
+const GroupModel = mongoose.model("Group", GroupSchema, "Group");
 
-odule.exports = GroupModel;
+module.exports = GroupModel;

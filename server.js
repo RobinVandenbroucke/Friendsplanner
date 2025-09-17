@@ -1,7 +1,8 @@
-import express from "express";
-import mongoose from "mongoose";
-import dotenv from "dotenv";
-import Event from "./backend/models/Event.js";
+const express = require("express");
+const mongoose = require("mongoose");
+const dotenv = require("dotenv");
+const eventRoutes = require("./backend/routes/eventRoutes");
+const groupRoutes = require("./backend/routes/groupRoutes");
 
 dotenv.config();
 
@@ -18,11 +19,8 @@ async function startServer() {
     });
     console.log("Connected to MongoDB Atlas");
 
-    // Alle events ophalen
-    app.get("/events", async (req, res) => {
-      const events = await Event.find();
-      res.json(events);
-    });
+    app.use("/events", eventRoutes);
+    app.use("/groups", groupRoutes);
 
     app.listen(PORT, () =>
       console.log(`Server running on http://localhost:${PORT}`)

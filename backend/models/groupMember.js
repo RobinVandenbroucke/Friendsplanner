@@ -8,6 +8,6 @@ const GroupMemberSchema = new mongoose.Schema({
     joinedAt: { type: Date, default: Date.now }
 }, { timestamps: true });
 
-const GroupMemberModel = mongoose.model("GroupMember", GroupMemberSchema);
+const GroupMemberModel = mongoose.model("GroupMember", GroupMemberSchema, "GroupMember");
 
 module.exports = GroupMemberModel;

@@ -1,10 +1,15 @@
-    import Group from "./backend/models/Group.js";
+const express = require("express");
+const GroupModel = require("../models/group");
 
-    // Alle groups ophalen
-    app.get("/groups", async (req, res) => {
-      const groups = await Group.find();
-      res.json(groups);
-    });
+const router = express.Router();
 
-    export default app;
+router.get("/", async (req, res) => {
+  try {
+    const groups = await GroupModel.find();
+    res.status(200).json(groups);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
 
+module.exports = router;

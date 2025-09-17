@@ -6,6 +6,6 @@ const EventAttendeeSchema = new mongoose.Schema({
     status: { type: String, enum: ["going", "interested", "not going"], required: true }
 }, { timestamps: true });
 
-const EventAttendeeModel = mongoose.model("EventAttendee", EventAttendeeSchema);
+const EventAttendeeModel = mongoose.model("EventAttendee", EventAttendeeSchema, "EventAttendee");
 
 module.exports = EventAttendeeModel;

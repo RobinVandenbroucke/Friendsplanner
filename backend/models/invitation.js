@@ -10,6 +10,6 @@ const InvitationSchema = new mongoose.Schema({
     invitedUserId: { type: mongoose.Schema.Types.ObjectId, ref: "User" }
 }, { timestamps: true });
 
-const InvitationModel = mongoose.model("Invitation", InvitationSchema);
+const InvitationModel = mongoose.model("Invitation", InvitationSchema, "Invitation");
 
 module.exports = InvitationModel;
